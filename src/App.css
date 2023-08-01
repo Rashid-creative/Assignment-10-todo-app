@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
-}
+/* ... Previous styles ... */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  background-color: #393737;
+  /* Light gray background outside App */
 }
 
-.App-link {
-  color: #61dafb;
+.app {
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  /* Border outside App */
+  background-color: #fff;
+  /* White background inside App */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Add box shadow for a slight depth effect */
+  border-radius: 10px;
+  /* Add rounded corners */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+.todo-input button {
+  margin-top: 10px;
+  /* Move the button below the input */
+  padding: 8px;
+  cursor: pointer;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  /* Add rounded corners for todo items */
+}
+
+.todo-item.completed {
+  background-color: #e6f7ff;
+  text-decoration: line-through;
+}
+
+.todo-list {
+  margin-top: 20px;
 }
